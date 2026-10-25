@@ -1,0 +1,194 @@
+.sea {
+  position: relative;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.sea-waves {
+  position: relative;
+  height: 90px;
+  background: var(--sand);
+  overflow: hidden;
+}
+
+.sea-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.sea-wave--0 {
+  fill: rgba(111, 147, 184, 0.35);
+  height: 100%;
+}
+
+.sea-wave--1 {
+  fill: rgba(111, 147, 184, 0.55);
+  height: 75%;
+}
+
+.sea-wave--2 {
+  fill: var(--navy);
+  height: 55%;
+}
+
+.sea-inner {
+  padding-top: 70px;
+}
+
+.sea .section-title {
+  color: var(--white);
+}
+
+.sea .section-lead {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.sea-head {
+  max-width: 680px;
+}
+
+.sea-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sea-card {
+  padding: 30px 26px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sea-card-number {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--wood);
+}
+
+.sea-card h3 {
+  margin-top: 40px;
+  font-size: 1.35rem;
+}
+
+.sea-card p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.sea-seasons-title {
+  margin-top: 90px;
+  margin-bottom: 28px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--wood-soft);
+}
+
+.sea-seasons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sea-season {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sea-season img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sea-season figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 80px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(0deg, rgba(14, 28, 46, 0.9), transparent);
+  pointer-events: none;
+}
+
+.sea-season strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.sea-season span {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sea-swipe-hint {
+  display: none;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1000px) {
+  .sea-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* On phones the cards and seasons become swipeable carousels */
+@media (max-width: 760px) {
+  .sea-waves {
+    height: 60px;
+  }
+  .sea-inner {
+    padding-top: 48px;
+  }
+  .sea-grid,
+  .sea-seasons {
+    display: flex;
+    gap: 12px;
+    margin: 0 -16px;
+    padding: 0 16px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
+    scrollbar-width: none;
+  }
+  .sea-grid::-webkit-scrollbar,
+  .sea-seasons::-webkit-scrollbar {
+    display: none;
+  }
+  .sea-card,
+  .sea-season {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+  .sea-card {
+    padding: 24px 22px;
+  }
+  .sea-card h3 {
+    margin-top: 20px;
+    font-size: 1.25rem;
+  }
+  .sea-season {
+    aspect-ratio: 4 / 5;
+  }
+  .sea-seasons-title {
+    margin-top: 56px;
+    margin-bottom: 20px;
+  }
+  .sea-swipe-hint {
+    display: block;
+  }
+}

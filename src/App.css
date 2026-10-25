@@ -1,0 +1,15 @@
+#root {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 60;
+  background: var(--wood);
+  transform-origin: 0 50%;
+}
