@@ -48,7 +48,7 @@ function Navbar() {
                             {link.label}
                         </a>
                     ))}
-                    <a href="#rezerwacja" className="btn btn-primary navbar-cta">
+                    <a href="#kontakt" className="btn btn-primary navbar-cta">
                         Zarezerwuj
                     </a>
                 </div>
@@ -75,7 +75,7 @@ function Navbar() {
                                 {link.label}
                             </motion.a>
                         ))}
-                        <a href="#rezerwacja" className="btn btn-primary navbar-cta" onClick={close}>
+                        <a href="#kontakt" className="btn btn-primary navbar-cta" onClick={close}>
                             Zarezerwuj
                         </a>
                     </motion.div>

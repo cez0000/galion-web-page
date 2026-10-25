@@ -33,7 +33,7 @@ function Booking() {
                 </motion.p>
                 <motion.div className="booking-actions" variants={fadeUp}>
                     <motion.a
-                        href="#rezerwacja"
+                        href="#kontakt"
                         className="btn btn-primary"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}

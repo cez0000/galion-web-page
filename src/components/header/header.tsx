@@ -75,7 +75,7 @@ function Header() {
                     sobą – tu dni płyną wolniej.
                 </motion.p>
                 <motion.div className="hero-actions" variants={fadeUp}>
-                    <motion.a href="#rezerwacja" className="btn btn-primary" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                    <motion.a href="#kontakt" className="btn btn-primary" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                         Zarezerwuj pobyt <span aria-hidden="true">→</span>
                     </motion.a>
                     <motion.a href="#galeria" className="btn btn-ghost" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

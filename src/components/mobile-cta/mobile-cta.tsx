@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import './mobile-cta.css';
 
-// Sticky booking bar for phones: appears after the hero, hides once the contact form is on screen.
+// Sticky booking bar for phones: appears after the hero, hides once the contact section is on screen.
 function MobileCta() {
     const [visible, setVisible] = useState(false);
     const { scrollY } = useScroll();
@@ -28,7 +28,7 @@ function MobileCta() {
                             <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
                         </svg>
                     </a>
-                    <a href="#rezerwacja" className="btn btn-primary mobile-cta-book">
+                    <a href="#kontakt" className="btn btn-primary mobile-cta-book">
                         Zarezerwuj pobyt
                     </a>
                 </motion.div>
